@@ -39,6 +39,9 @@ REGS_TO_READ = "51"
 BAUD_RATE = "19200"
 PARITY = "none"
 
+status_dict = { 0 : "Connected", 1400: "Regulatory delay", 1300 : "Grid synchronization" , 1200 : "Connection tests" , 1100 : "Grid unstable", 1000 : "Power-up tests" , 800 : "DC undervoltage" , 500 : "Active fault", 300 : "Start inhibit active" , 200 : "Country code not set" , 100: "Inverter disabled" , 1500 : "Other", 1150: "External trip signal", 820: "DC overvoltage" }
+
+
 #~~~~~~~~~~~~~~~~~~~   START Functions ~~~~~~~~~~~~~~~~~~~~~~~
 
 def read_inverter(device, rtu_address, debug):
@@ -88,9 +91,11 @@ def read_inverter(device, rtu_address, debug):
 	if (("21" in register_dict) and (("22" in register_dict))):
 		num2 = register_dict["21"]
 		num1 = register_dict["22"]
-		result, value = convert_32(num1, num2)   #######################  Use 172.01 Page 74 of Ref A to convert to keyword #########
+		result, value = convert_32(num1, num2)   
 		if (result):
 			status = value	
+			if status in status_dict:
+				status = status_dict[status]
 			count += 1
 	if "12" in register_dict:
 		trip_fault = register_dict["12"]
