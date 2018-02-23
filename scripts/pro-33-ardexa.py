@@ -243,7 +243,7 @@ def read_inverter(device, rtu_address, debug):
 
 	header = "# Datetime, AC Voltage 1 (V), AC Voltage 2 (V), AC Voltage 3 (V), Grid Frequency (Hz), AC Power (W), Power Factor, DC Voltage (V), DC Current (A), Temperature 1 (C), Temperature 2 (C), Temperature 3 (C), Temperature 4 (C), Energy today (kWh), Status, Inverter ON, Trip Fault, String Current 1 (A), String Current 2 (A), String Current 3 (A), String Current 4 (A), String Current 5 (A), String Current 6 (A), String Current 7  (A),String Current 8 (A)\n"
 	
-	output_str =  datetime_str + "," +  str(vac1) + "," + str(vac2) + "," + str(vac3) + "," + str(freq) + "," + str(pac) + "," + str(cosphi) + "," + str(vdc) + "," + str(idc) + "," + str(cb_temp) + "," + str(tempa) + "," + str(tempb) + "," + str(tempc) + "," + str(total_energy) + "," + str(status) + "," + str(inv_on) + "," + str(trip_fault) + str(idc_string1) + "," + str(idc_string2) + "," + str(idc_string3) + "," + str(idc_string4) + "," + str(idc_string5) + "," + str(idc_string6) + "," + str(idc_string7) + "," + str(idc_string8) + "\n"
+	output_str =  datetime_str + "," +  str(vac1) + "," + str(vac2) + "," + str(vac3) + "," + str(freq) + "," + str(pac) + "," + str(cosphi) + "," + str(vdc) + "," + str(idc) + "," + str(cb_temp) + "," + str(tempa) + "," + str(tempb) + "," + str(tempc) + "," + str(total_energy) + "," + str(status) + "," + str(inv_on) + "," + str(trip_fault) + "," + str(idc_string1) + "," + str(idc_string2) + "," + str(idc_string3) + "," + str(idc_string4) + "," + str(idc_string5) + "," + str(idc_string6) + "," + str(idc_string7) + "," + str(idc_string8) + "\n"
 
 	# return the header and output
 	return errors, header, output_str
