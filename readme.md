@@ -47,8 +47,8 @@ eg: sudo python pro-33-ardexa.py /dev/ttyS0 1 8 /opt/ardexa 1
 
 ## Collecting to the Ardexa cloud
 Collecting to the Ardexa cloud is free for up to 3 Raspberry Pis (or equivalent). Ardexa provides free agents for ARM, Intel x86 and MIPS based processors. To collect the data to the Ardexa cloud do the following:
-- Create a `RUN` scenario to schedule the Ardexa Kostal script to run at regular intervals (say every 300 seconds/5 minutes).
-- Then use a `CAPTURE` scenario to collect the csv (comma separated) data from the filename (say) `/opt/ardexa/Kostal/logs/`. This file contains a header entry (as the first line) that describes the CSV elements of the file.
+- Create a `RUN` scenario to schedule the Ardexa ABB Pro 33 script to run at regular intervals (say every 300 seconds/5 minutes).
+- Then use a `CAPTURE` scenario to collect the csv (comma separated) data from the filename (say) `/opt/ardexa/pro33/inverter1/logs/`. This file contains a header entry (as the first line) that describes the CSV elements of the file.
 
 ## Help
 Contact Ardexa at support@ardexa.com, and we'll do our best efforts to help.
