@@ -16,7 +16,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='abb_pro33_ardexa',
-    version='0.1.3',
+    version='0.1.4',
     description='Collect from ABB PRO33 Inverters and send the data to your cloud using Ardexa',
     long_description=long_description,
     long_description_content_type='text/markdown',

@@ -254,7 +254,7 @@ def read_inverter(device, rtu_address, debug):
         print("\tTemperature A (C): ", tempa)
         print("\tTemperature B (C): ", tempb)
         print("\tTemperature C (C): ", tempc)
-        print("\tEnergy today (kWh): ", total_energy)
+        print("\tEnergy Total (kWh): ", total_energy)
         print("\tStatus: ", status)
         print("\tInverter ON: ", inv_on)
         print("\tTrip Fault: ", trip_fault)
@@ -269,7 +269,7 @@ def read_inverter(device, rtu_address, debug):
 
     datetime = ap.get_datetime_str()
 
-    header = "# Datetime, AC Voltage 1 (V), AC Voltage 2 (V), AC Voltage 3 (V), Grid Frequency (Hz), AC Power (W), Power Factor, DC Voltage (V), DC Current (A), Temperature 1 (C), Temperature 2 (C), Temperature 3 (C), Temperature 4 (C), Energy today (kWh), Status, Inverter ON, Trip Fault, String Current 1 (A), String Current 2 (A), String Current 3 (A), String Current 4 (A), String Current 5 (A), String Current 6 (A), String Current 7  (A),String Current 8 (A)\n"
+    header = "# Datetime, AC Voltage 1 (V), AC Voltage 2 (V), AC Voltage 3 (V), Grid Frequency (Hz), AC Power (W), Power Factor, DC Voltage (V), DC Current (A), Temperature 1 (C), Temperature 2 (C), Temperature 3 (C), Temperature 4 (C), Energy Total (kWh), Status, Inverter ON, Trip Fault, String Current 1 (A), String Current 2 (A), String Current 3 (A), String Current 4 (A), String Current 5 (A), String Current 6 (A), String Current 7  (A),String Current 8 (A)\n"
 
     output_str = datetime + "," + ",".join(map(str, [vac1, vac2, vac3, freq, pac, cosphi, vdc, idc, cb_temp, tempa, tempb, tempc, total_energy, status, inv_on, trip_fault, idc_string1, idc_string2, idc_string3, idc_string4, idc_string5, idc_string6, idc_string7, idc_string8])) + "\n"
 
